@@ -1,0 +1,45 @@
+idade = int (input("coloque sua idade :"))
+if idade >= 16 : 
+    print("você ja pode votar")
+else: 
+    print ("voce ainda nao pode votar")
+
+
+
+
+numero = int (input(" digite o numero:"))
+numero1 = int (input("digite o segundo numero :"))
+if numero > numero1:
+    print(numero)
+else:
+    print(numero1)
+
+
+
+
+
+valor = int (input("qual valor da sua compra :"))
+vip = input ("O senhor e cliente vip? (s/n) :")
+if valor  > 200.00 and vip == "s":
+    print (valor-(valor*0.2))
+else:
+    print(valor-(valor*0.05))
+    
+    
+    
+    
+ano = int (input("ano bissexto: "))
+if ano %4 == 0 or ano %100 != 0:
+    print("e um ano bissexto")
+else :
+    print ("nao e um ano bissexto"))
+    
+    
+idade = int(input("Digite a idade: "))
+salario = float(input("Digite o salário: "))
+negativado = input("O nome está negativado? (sim/nao): ")
+
+if ((25 <= idade <= 60) or salario > 5000) and negativado.lower() == "nao":
+    print("Aprovado")
+else:
+    print("Negado")
