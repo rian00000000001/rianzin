@@ -1,0 +1,124 @@
+a = 10
+b = 5
+c = 20
+status = True
+
+# a) (a > b) and (c <= 20)
+# (10 > 5) → True
+# (20 <= 20) → True
+# True and True → True
+print("a)", True)
+
+# b) (a == c) or (b != 5)
+# (10 == 20) → False
+# (5 != 5) → False
+# False or False → False
+print("b)", False)
+
+# c) not status and (a > 0)
+# not True → False
+# (10 > 0) → True
+# False and True → False
+print("c)", False)
+
+# d) (c / a == 2) and ((a + b) == 15) or not status
+# (20 / 10 == 2) → True
+# (10 + 5 == 15) → True
+# True and True → True
+# not True → False
+# True or False → True
+print("d)", True)
+
+
+
+
+
+valor_compra = float(input("Digite o valor da compra: "))
+valor_pago = float(input("Digite o valor pago: "))
+
+troco = valor_pago - valor_compra
+
+if valor_pago < valor_compra:
+    print(f"Dinheiro insuficiente. Faltam R$ {abs(troco):.2f}")
+else:
+    print(f"Pagamento aprovado. Seu troco é de R$ {troco:.2f}")
+    
+    
+    
+    
+    
+    
+valor = float(input("Digite o valor da compra: "))
+regiao = input("Digite a região (Norte, Sul, Centro-Oeste, Nordeste, Sudeste): ")
+
+frete = 50
+
+if (regiao == "Sul" or regiao == "Sudeste") and valor > 150:
+    frete = 0
+elif regiao == "Centro-Oeste" and valor > 250:
+    frete = 0
+elif (regiao == "Norte" or regiao == "Nordeste") and valor > 400:
+    frete = 0
+
+total = valor + frete
+
+if frete == 0:
+    print("Você ganhou frete grátis!")
+else:
+    print("Frete padrão de R$ 50,00 aplicado.")
+
+print(f"Valor final da compra: R$ {total:.2f}")
+
+
+
+
+
+
+
+idade = int(input("Digite a idade: "))
+
+while idade < 14 or idade > 120:
+    idade = int(input("Idade inválida. Por favor, digite uma idade real: "))
+
+print("Cadastro realizado com sucesso!")
+
+
+
+
+
+
+
+total = 0
+
+for i in range(1, 7):
+    valor = float(input(f"Digite o faturamento do mês {i}: "))
+    total += valor
+
+media = total / 6
+
+print(f"Faturamento total: R$ {total:.2f}")
+print(f"Média mensal: R$ {media:.2f}")
+
+
+
+
+
+
+saldo = 1000.0
+
+while True:
+    saque = float(input("Digite o valor do saque (0 para sair): "))
+
+    if saque == 0:
+        break
+
+    if saque <= saldo:
+        saldo -= saque
+        print(f"Saque realizado! Saldo atual: R$ {saldo:.2f}")
+    else:
+        print("Saldo insuficiente!")
+
+    if saldo == 0:
+        break
+
+print(f"Sessão encerrada. Seu saldo final é de R$ {saldo:.2f}")
